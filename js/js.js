@@ -13,3 +13,35 @@ window.onscroll = function (s) {
     header.classList.remove("none");
   }
 };
+let allNone = document.querySelectorAll(".d-none");
+let signIn = document.querySelector(".b-sign");
+let signInActive = document.querySelector(".sign-inf");
+let markX = document.querySelector(".mark-x");
+signIn.onclick = function () {
+  // allNone.forEach(function (e) {
+  //   e.classList.add("active");
+  // });
+  signInActive.classList.toggle("active");
+};
+
+markX.onclick = function () {
+  // allNone.forEach(function (e) {
+  //   e.classList.remove("active");
+  // });
+  signInActive.classList.toggle("active");
+};
+
+let eye = document.querySelector(".eye");
+let eyed = document.querySelectorAll(".eye i");
+let pass = document.querySelector(".pass");
+
+eye.onclick = function (e) {
+  eyed.forEach(function (e) {
+    e.classList.toggle("d-none");
+  });
+  if (pass.getAttribute("type") == "password") {
+    pass.setAttribute("type", "text");
+  } else if (pass.getAttribute("type") == "text") {
+    pass.setAttribute("type", "password");
+  }
+};
