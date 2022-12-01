@@ -7,7 +7,7 @@ bars.onclick = function () {
 window.onscroll = function (s) {
   let scroll = this.scrollY;
   console.log(scroll);
-  if (this.scrollY > 100) {
+  if (this.scrollY > 50) {
     header.classList.add("none");
   } else {
     header.classList.remove("none");
