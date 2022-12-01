@@ -384,11 +384,11 @@ a{
     position: relative;
     color: var(--main-color-orange);
     cursor: pointer;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.103);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.301);
     transition: var(--transition);
 }
 .landing .order-b .play:hover{
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.205);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.400);
 }
 .landing .order-b .play::after{
     content: '\f04b';
