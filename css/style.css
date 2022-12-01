@@ -365,7 +365,7 @@ a {
 }
 @media(max-width: 767px) {
     .sign-inf .a-sign {
-        padding: 20px;
+        padding: 40px 20px;
     }
 }
 .sign-inf .a-sign h2 {
