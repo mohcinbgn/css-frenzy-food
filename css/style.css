@@ -257,6 +257,257 @@ a{
 
 /* End Header  */
 
+/* start Sign in  */
+.d-none.active {
+    display: none;
+}
+
+.sign-inf{
+    z-index: 100;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.212);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+}
+@media(max-width: 767px) {
+    .sign-inf {
+        margin-top: -140px;
+    }
+}
+.sign-inf.active {
+    display: flex;
+    opacity: 1;
+}
+.sign-inf .mark-x{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #ff52461a;
+    border-radius: 50%;
+    border: 1px solid var(--main-color-orange);
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff52465d;
+    color: var(--main-color-orange);
+    transition: var(--transition);
+}
+.sign-inf .mark-x:hover{
+    background-color: #ff52462f;
+    box-shadow: 0 0 10px #ff524683;
+    color: var(--back-color-orange);
+}
+.sign-inf .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign-inf .a-sign{
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 224, 224);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+    padding: 50px;
+    background-color: #fff;
+    width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+.sign-inf .a-sign h2{
+    display: block;
+    margin-bottom: 30px;
+    color: var(--color-grey);
+}
+
+.sign-inf form input{
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    padding: 12px 50px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(184, 184, 184);
+    border-radius: 10px;
+    outline: none;
+    transition: var(--transition);
+    position: relative;
+}
+
+.sign-inf form .input-i{
+    position: relative;
+}
+.sign-inf form .input-i i{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 18px;
+    color: var(--color-grey);
+    z-index: 2;
+}
+.sign-inf form .input-i .eye {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    cursor: pointer;
+}
+.sign-inf form .input-i .eye i.d-none{
+    display: none;
+}
+.sign-inf form .input:focus .input-i i{
+    color: black;
+}
+.sign-inf form input[type="submit"]{
+    padding: 12px 0;
+    background-color: var(--main-color-orange);
+    border-color: var(--main-color-orange);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff3a2c4f;
+}
+.sign-inf form input[type="submit"]:hover{
+    background-color: var(--back-color-orange);
+    border-color: var(--back-color-orange);
+    box-shadow: 0 0 10px #ff34257e;
+}
+.sign-inf form input:focus{
+    border: 2px solid rgb(85, 85, 85);
+}
+.sign-inf form input::placeholder{
+    transition: var(--transition);
+}
+.sign-inf form input:focus::placeholder{
+    opacity: 0;
+}
+.sign-inf .Forgot {
+    color: var(--color-grey);
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: right;
+}
+.sign-inf .Forgot:hover{
+    color: black;
+}
+.sign-inf hr {
+    margin: 40px 0;
+    position: relative;
+    color: var(--color-grey);
+}
+.sign-inf hr::before{
+    content: "Or";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px 20px;
+    color: var(--color-grey);
+}
+.sign-inf ul{
+}
+@media(max-width: 767px) {
+    .sign-inf ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.sign-inf ul .a-in {
+    margin: 10px auto;
+    width: fit-content;
+}
+@media(max-width: 767px) {
+    .sign-inf ul .a-in {
+        text-align: center;
+        margin: 0;
+    }
+}
+.sign-inf .a-in a{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 25px;
+    width: 240px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 6px;
+    transition: var(--transition);
+    color: var(--color-grey);
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.11);
+}
+@media(max-width: 767px) {
+    .sign-inf .a-in a {
+        width: fit-content;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.sign-inf .a-in i{
+    transition: var(--transition);
+}
+.sign-inf .a-in a:hover{
+    border: 1px solid rgb(85, 85, 85);
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.199);
+}
+.sign-inf .google i{
+    color: rgba(0, 128, 0, 0.747);
+}
+.sign-inf .fb i {
+    color: rgba(0, 81, 255, 0.801);
+}
+.sign-inf .apple i {
+    color: rgba(0, 0, 0, 0.774);
+}
+.sign-inf .google:hover i {
+    color: rgb(0, 128, 0);
+}
+
+.sign-inf .fb:hover i {
+    color: rgb(0, 81, 255);
+}
+.sign-inf .apple:hover i {
+    color: rgb(0, 0, 0);
+}
+.sign-inf .a-in i{
+    margin-right: 20px;
+}
+@media(max-width: 767px) {
+    .sign-inf .a-in a i{
+        margin: 0;
+    }
+    .sign-inf .a-in span {
+        display: none;
+    }
+}
+.sign-inf {}
+.sign-inf .d-have{
+    margin-top: 30px;
+    color: var(--color-grey);
+}
+.sign-inf .d-have a{
+    color: var(--main-color-orange);
+}
+.sign-inf .d-have a:hover{
+    color: var(--back-color-orange);
+}
+/* End Sign in  */
+
 /* Start Landing  */
 .landing{
     background-color: #FAF3DD;
@@ -384,11 +635,11 @@ a{
     position: relative;
     color: var(--main-color-orange);
     cursor: pointer;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.301);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.103);
     transition: var(--transition);
 }
 .landing .order-b .play:hover{
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.400);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.205);
 }
 .landing .order-b .play::after{
     content: '\f04b';
@@ -920,8 +1171,8 @@ a{
     width: 340px;
 }
 .footer .box .logo{
-    width: 110px;
-    margin-left: -20px;
+    width: 140px;
+    margin-left: -30px;
 }
 .footer .box .para{
     width: 100%;
