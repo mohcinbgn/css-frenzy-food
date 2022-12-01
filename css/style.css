@@ -274,7 +274,7 @@ a{
     opacity: 0;
     transition: var(--transition);
     backdrop-filter: blur(4px);
-    padding: 10px 0;
+    padding: 20px 0;
 }
 @media(max-width: 767px) {
     .sign-inf {
