@@ -445,10 +445,9 @@ a {
 .sign-inf .Forgot {
     color: var(--color-grey);
     display: block;
-    margin-top: -10px;
-    margin-bottom: 20px;
     font-size: 14px;
-    text-align: right;
+    width: fit-content;
+    margin: -10px 0 20px auto;
 }
 
 .sign-inf .Forgot:hover {
