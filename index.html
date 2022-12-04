@@ -23,10 +23,8 @@
     <div class="header">
       <div class="container">
         <a class="logo" href=""><img src="images/logo1.png" alt="" /></a>
-
         <nav>
           <i class="fa-solid fa-bars bars"></i>
-
           <div class="nav-a">
             <ul class="menu-ac">
               <li><a href="">Home</a></li>
@@ -41,7 +39,8 @@
                 <div class="search back-i">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div class="cart back-i">
+                <div class="cart back-i show-cart">
+                  <span class="cart-count active">0</span>
                   <i class="fa-solid fa-bag-shopping"></i>
                 </div>
               </div>
@@ -54,51 +53,152 @@
       </div>
     </div>
 
+    <div class="cart-d">
+      <div class="cart-fix show-cart">
+        <span class="cart-count active">0</span>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <div class="content">
+        <span class="x-cart mark-x"><i class="fa-solid fa-xmark"></i></span>
+        <div class="box add-cart">
+          <span class="x-cart mark-x x-product"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+          <img src="images/tasty.png" alt="" />
+          <div class="text">
+            <h2>Tasty French Fries</h2>
+            <span class="price">Price 23$</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="b-all">Add to cart +</button>
+          </div>
+        </div>
+        <div class="box add-cart">
+          <span class="x-cart mark-x x-product"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+          <img src="images/dishes.png" alt="" />
+          <div class="text">
+            <h2>Tasty French Fries</h2>
+            <span class="price">Price 23$</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="b-all">Add to cart +</button>
+          </div>
+        </div>
+        <div class="box add-cart">
+          <span class="x-cart mark-x x-product"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+          <img src="images/tasty1.png" alt="" />
+          <div class="text">
+            <h2>Tasty French Fries</h2>
+            <span class="price">Price 23$</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="b-all">Add to cart +</button>
+          </div>
+        </div>
+        <div class="box add-cart">
+          <span class="x-cart mark-x x-product"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+          <img src="images/backfast.png" alt="" />
+          <div class="text">
+            <h2>Tasty French Fries</h2>
+            <span class="price">Price 23$</span>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="b-all">Add to cart +</button>
+          </div>
+        </div>
+        <a class="show-all b-all" href="">Show All</a>
+      </div>
+    </div>
     <div class="sign-inf">
       <div class="container">
         <div class="a-sign">
-          <span class="mark-x"><i class="fa-solid fa-xmark"></i></span>
-          <h2>Welcome Back!</h2>
-          <form action="">
-            <div class="input-i">
-              <i class="fa-solid fa-envelope"></i>
-              <input class="email" type="email" placeholder="Email" />
-            </div>
-            <div class="input-i">
-              <i class="fa-solid fa-lock"></i>
-              <input class="pass" type="password" placeholder="Password" />
-              <span class="eye">
-                <i class="fa-regular fa-eye"></i>
-                <i class="fa-regular fa-eye-slash d-none"></i
-              ></span>
-            </div>
-            <a class="Forgot" href="">Forgot Password</a>
-            <input class="sub" type="submit" value="Login" />
-          </form>
-          <hr />
-          <ul>
-            <li class="google a-in">
-              <a href=""
-                ><i class="fa-brands fa-google"></i
-                ><span>Sign in with Google</span></a
-              >
-            </li>
-            <li class="fb a-in">
-              <a href=""
-                ><i class="fa-brands fa-facebook-f"></i
-                ><span>Sign in with Facebook</span></a
-              >
-            </li>
-            <li class="apple a-in">
-              <a href=""
-                ><i class="fa-brands fa-apple"></i
-                ><span>Sign in with Apple</span></a
-              >
-            </li>
-          </ul>
+          <div class="signin">
+            <span class="mark-x x-sign"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Welcome Back!</h2>
+            <form action="">
+              <div class="input-i">
+                <i class="fa-solid fa-envelope"></i>
+                <input class="email" type="email" placeholder="Email" />
+              </div>
+              <div class="input-i">
+                <i class="fa-solid fa-lock"></i>
+                <input class="pass" type="password" placeholder="Password" />
+                <span class="eye">
+                  <i class="fa-regular fa-eye"></i>
+                  <i class="fa-regular fa-eye-slash d-none"></i
+                ></span>
+              </div>
+              <span class="forgot">Forgot Password</span>
+              <input class="sub" type="submit" value="Login" />
+            </form>
+            <hr />
+            <ul>
+              <li class="google a-in">
+                <a href=""
+                  ><i class="fa-brands fa-google"></i
+                  ><span>Sign in with Google</span></a
+                >
+              </li>
+              <li class="fb a-in">
+                <a href=""
+                  ><i class="fa-brands fa-facebook-f"></i
+                  ><span>Sign in with Facebook</span></a
+                >
+              </li>
+              <li class="apple a-in">
+                <a href=""
+                  ><i class="fa-brands fa-apple"></i
+                  ><span>Sign in with Apple</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="forget-s">
+            <span class="back-forgot mark-x"
+              ><i class="fa-solid fa-arrow-left-long"></i
+            ></span>
+            <h2>Forgot Password</h2>
+            <p class="para">
+              Enter your e-mail address and we'll send you a link to reset your
+              password
+            </p>
+            <form action="">
+              <div class="input-i">
+                <i class="fa-solid fa-envelope"></i>
+                <input class="email" type="email" placeholder="Email" />
+                <input class="sub" type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
           <div class="d-have">
             D'ont have an account?
-            <a href="">Sign up</a>
+            <span>Sign up</span>
           </div>
         </div>
       </div>
@@ -185,21 +285,24 @@
           <li>Dersest</li>
           <li>Burger</li>
         </ul>
+
         <div class="content">
-          <div class="box">
+          <div class="box add-cart">
             <img src="images/tasty.png" alt="" />
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+            <div class="text">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h2>Tasty French Fries</h2>
+              <span>Price 23$</span>
+              <button class="b-all">Add to cart +</button>
             </div>
-            <h2>Tasty French Fries</h2>
-            <span>Price 23$</span>
-            <button class="b-all">Add to cart +</button>
           </div>
-          <div class="box">
+          <div class="box add-cart">
             <img src="images/dishes.png" alt="" />
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -212,7 +315,7 @@
             <span>Price 20$</span>
             <button class="b-all">Add to cart +</button>
           </div>
-          <div class="box">
+          <div class="box add-cart">
             <img src="images/backfast.png" alt="" />
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -225,7 +328,7 @@
             <span>Price 10$</span>
             <button class="b-all">Add to cart +</button>
           </div>
-          <div class="box">
+          <div class="box add-cart">
             <img src="images/tasty1.png" alt="" />
             <div class="stars">
               <i class="fa-solid fa-star"></i>
@@ -344,7 +447,7 @@
         </div>
       </div>
       <div class="copyright">
-        Copyright 2022 Ilyas Hasan All Right Reserved | made with
+        Copyright 2022 BG All Right Reserved | made with
         <span><i class="fa-solid fa-heart"></i></span> by BG
       </div>
     </div>
