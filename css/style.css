@@ -246,6 +246,7 @@ a {
 .header .cr .back-i {
     padding: 8px;
     cursor: pointer;
+    position: relative;
 }
 
 .header .cr .back-i:hover i {
@@ -293,6 +294,139 @@ a {
 
 /* End Header  */
 
+/* Start Cart  */
+.cart-d .cart-fix {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 100;
+    padding: 12px 14px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+    background-color: #fff;
+    cursor: pointer;
+    display: none;
+    transition: var(--transition);
+}
+
+.cart-d .cart-fix:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+}
+
+.cart-count {
+    position: absolute;
+    left: -6px;
+    bottom: -8px;
+    background-color: var(--main-color-orange);
+    height: 22px;
+    width: 22px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.cart-count:hover {
+    background-color: var(--back-color-orange);
+}
+
+.cart-fix.active {
+    display: block;
+    transition: var(--transition);
+}
+
+.cart-count.active {
+    display: flex;
+}
+
+.cart-d .content{
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.274);
+    right: -800px;
+    top: 0;
+    z-index: 100;
+    padding: 80px 20px;
+    /* display: none; */
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+    box-shadow: 0px 0px 20px rgb(201, 201, 201);
+}
+@media(max-width:767px){
+    .cart-d .content{
+        width: 100%;
+    }
+}
+.cart-d .content.active{
+    right: 0;
+}
+.cart-d .content .box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: var(--transition);
+}
+.cart-d .content .box.remove{
+    transform: translateX(800px);
+}
+.cart-d .content .x-cart{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    padding: 4px 10px;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+.cart-d .content .box .x-cart{
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+.cart-d .content .box h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.cart-d .content .box .price{
+    display: block;
+    font-size: 14px;
+    color: var(--color-grey);
+}
+.cart-d .content .box .stars i{
+    font-size: 12px;
+    color: #FCC42B;
+}
+.cart-d .content .box img{
+    width: 60px;
+}
+.cart-d .content .box .b-all{
+    display: none;
+}
+.cart-d .show-all{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 25px;
+    /* color: var(--color-grey); */
+}
+.cart-d .show-alls:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.274);
+}
+/* End Cart  */
+
 /* start Sign in  */
 .d-none.active {
     display: none;
@@ -324,22 +458,22 @@ a {
     opacity: 1;
 }
 
-.sign-inf .mark-x {
+.mark-x {
     position: absolute;
     right: 10px;
     top: 10px;
     font-size: 20px;
     padding: 5px 10px;
-    background-color: #ff52461a;
+    background-color: #ff52460c;
     border-radius: 50%;
     border: 1px solid var(--main-color-orange);
     cursor: pointer;
-    box-shadow: 0 0 10px #ff52465d;
+    box-shadow: 0 0 10px #ff524646;
     color: var(--main-color-orange);
     transition: var(--transition);
 }
 
-.sign-inf .mark-x:hover {
+.mark-x:hover {
     background-color: #ff52462f;
     box-shadow: 0 0 10px #ff524683;
     color: var(--back-color-orange);
@@ -365,7 +499,7 @@ a {
 }
 @media(max-width: 767px) {
     .sign-inf .a-sign {
-        padding: 40px 20px;
+        padding: 20px;
     }
 }
 .sign-inf .a-sign h2 {
@@ -442,15 +576,16 @@ a {
     opacity: 0;
 }
 
-.sign-inf .Forgot {
+.sign-inf .forgot {
     color: var(--color-grey);
     display: block;
+    margin: -10px 0 20px auto ;
     font-size: 14px;
     width: fit-content;
-    margin: -10px 0 20px auto;
+    cursor: pointer;
 }
 
-.sign-inf .Forgot:hover {
+.sign-inf .forgot:hover {
     color: black;
 }
 
@@ -578,14 +713,35 @@ a {
     color: var(--color-grey);
 }
 
-.sign-inf .d-have a {
+.sign-inf .d-have span {
     color: var(--main-color-orange);
+    cursor: pointer;
 }
 
 .sign-inf .d-have a:hover {
     color: var(--back-color-orange);
 }
 
+.sign-inf .signin.none{
+    display: none;
+}
+
+.sign-inf .forget-s{
+    display: none;
+}
+.sign-inf .forget-s {
+    /* position: relative; */
+}
+.sign-inf .forget-s .back-forgot{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: fit-content;
+    padding: 5px 7px;
+}
+.sign-inf .forget-s.active{
+    display: block;
+}
 /* End Sign in  */
 
 /* Start Landing  */
@@ -658,6 +814,7 @@ a {
 .landing .text p {
     font-weight: 700;
     color: var(--main-color);
+    color: red;
 }
 
 .landing .text p i {
@@ -688,7 +845,7 @@ a {
 .landing .text .para {
     color: var(--color-grey);
     line-height: 1.5;
-    max-width: 400px;
+    width: 400px;
     font-size: 20px;
     font-weight: normal;
 }
@@ -696,6 +853,7 @@ a {
 @media(max-width: 767px) {
     .landing .text .para {
         font-size: 16px;
+        width: 100%;
     }
 }
 
